@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CGPA & GPA Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container fade-in">
+        <header>
+            <h1>🎓 CGPA & GPA Calculator</h1>
+            <button class="about-btn"
+                onclick="window.open('https://vairavel-portfolio.onrender.com', '_blank')">About</button>
+        </header>
+
+        <!-- GPA Calculator -->
+        <section class="card slide-up">
+            <h2>📘 GPA Calculator</h2>
+            <div id="gpa-inputs">
+                <div class="subject">
+                    <input type="text" placeholder="Subject Name">
+                    <select class="grade">
+                        <option value="10">S</option>
+                        <option value="9">A</option>
+                        <option value="8">B</option>
+                        <option value="7">C</option>
+                        <option value="6">D</option>
+                        <option value="5">E</option>
+                        <option value="0">F</option>
+                    </select>
+                    <input type="number" placeholder="Credits" class="credit" min="1">
+                </div>
+            </div>
+            <div class="buttons">
+                <button onclick="addSubject()">➕ Add Subject</button>
+                <button onclick="calculateGPA()">✅ Calculate GPA</button>
+            </div>
+            <p id="gpa-result"></p>
+        </section>
+
+        <!-- CGPA Calculator -->
+        <section class="card slide-up delay">
+            <h2>📗 CGPA Calculator</h2>
+            <div id="cgpa-inputs">
+                <div class="semester">
+                    <input type="number" placeholder="GPA" class="gpa" step="0.01" min="0" max="10">
+                    <input type="number" placeholder="Credits" class="credit" min="1">
+                </div>
+            </div>
+            <div class="buttons">
+                <button onclick="addSemester()">➕ Add Semester</button>
+                <button onclick="calculateCGPA()">✅ Calculate CGPA</button>
+            </div>
+            <p id="cgpa-result"></p>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

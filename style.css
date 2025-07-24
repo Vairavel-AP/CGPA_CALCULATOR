@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #111;
+    color: #f9f9f9;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    animation: fadeIn 1s ease-in-out;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 30px;
+    color: white;
+    animation: slideDown 1s ease-out;
+}
+
+.about-btn {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.about-btn:hover {
+    background: white;
+    color: black;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+h2 {
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.subject,
+.semester {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+input,
+select,
+button {
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    background: #222;
+    color: white;
+    outline: none;
+}
+
+input::placeholder {
+    color: #888;
+}
+
+button {
+    background: #00d1ff;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #00aacc;
+}
+
+.buttons {
+    margin-top: 15px;
+}
+
+p {
+    font-weight: bold;
+    font-size: 18px;
+    color: #00ffb3;
+}
+
+@media screen and (max-width: 600px) {
+
+    .subject,
+    .semester {
+        flex-direction: column;
+    }
+
+    input,
+    select {
+        width: 100%;
+    }
+
+    .buttons button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+.slide-up {
+    animation: slideUp 1s ease-in-out;
+}
+
+.slide-up.delay {
+    animation-delay: 0.4s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
